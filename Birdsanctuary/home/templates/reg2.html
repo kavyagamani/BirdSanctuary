@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h1 align="center">Registration</h1>
+    <p style="color:red;text-align:center"> {{msg}} </p>
+    <form method="post" align="center">
+        {% csrf_token %}
+        <table>
+         <tr>
+            <td>name</td>
+            <td><input type="text" name="t1">
+</td>
+         </tr>
+         <tr>
+            <td>gender</td>
+            <td>Male<input type="radio" value="male" name="r1">
+                FeMale<input type="radio"value="female" name="r1">
+                    others<input type="radio"value="others" name="r1"></td>
+
+         </tr>  
+         <tr>
+            <td>city</td>
+            <td><input type="text" name="t2">
+                </td>
+
+         </tr>  
+         <tr>
+            <td>address</td>
+            <td><textarea name="t3" ></textarea></td>
+                </tr>
+                <tr>
+                    <td>EMAIL</td>
+                    <td><input type="text" name="t4">
+                    </td>
+        
+                 </tr>  
+                 <tr>
+                    <td>MOBILE NO</td>
+                    <td><input type="text" name="t5"></td>
+        
+                 
+
+
+         </tr>  
+         <tr>
+            <td>SUBMIT</td>
+            <td><input type="submit" name="submit" value='login'></td>
+
+         
+
+
+ </tr>  
+            
+        </table>
+    </form>
+</body>
+</html>

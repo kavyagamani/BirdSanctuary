@@ -1,0 +1,56 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4">
+
+      
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+         
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-8" style="margin-top:100px;">
+
+<form name="form1" method="post">
+  {% csrf_token %}
+  <div class="card">
+    <div class="card-header bg-success text-white">
+  <h1> FORGOTPASSWORD</h1>
+  </div> 
+
+   <div class="card-body">
+  <table class="table" style="width:600px;">
+  
+  
+    <tr>
+      <td width="385">username</td>
+      <td width="321">
+      <input type="text" name="t1" placeholder="username" required class="form-control border border-2 border-success"></td>
+    </tr>
+    
+    <tr><td> </td>
+      <td>
+	  <input type="submit" name="Submit" value="Forgotpassword" class="btn btn-primary">
+     </td>
+    </tr>
+  </table>
+  </div>
+  </div>
+</form>
+</div>
+
+</div>
+</div>
+
+
+<div class="container-fluid bg-dark p-3 " style="margin-top:180px;">
+<div class="row">
+  <p class="text-white"> &copy copyright 2023 Birds Sanctuary </p>
+</div>
+
+</div>
+</body>
+</html>
