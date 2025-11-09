@@ -1,0 +1,75 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-2">
+
+      <h3 class="mt-3"> Menu Links </h3>
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+          {% include 'user_menu.html'%}
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-10">
+      <form name="form1" method="post" action="">
+        <h3 class="text-warning">Take appointment view</h3>
+        <hr>
+
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+      <th>visitor type</th>
+      <th >user id</th>
+      <th >appointment date</th>
+      <th >appointment timings</th>
+      <th >no of adults</th>
+      <th >no of childrens</th>
+      <th >adult cost</th>
+      <th >children cost</th>
+      <th >shooting cost</th>
+      <th >Accept status</th>
+                <th >Payment status</th>
+      <th colspan="2" class="bg-danger">Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in userdict %}
+    <tr>
+      <td>{{i.visitor_type}}</td>
+      <td>{{i.user_id}}</td>
+      <td>{{i.appointment_date}}</td>
+      <td>{{i.appointment_timings}}</td>
+      <td>{{i.no_of_adults}}</td>
+      <td>{{i.no_of_children}}</td>
+      <td>{{i.adult_cost}}</td>
+      <td>{{i.children_cost}}</td>
+      <td>{{i.shooting_cost}}</td>
+      <td>{{i.status}}</td>
+       <td>{{i.payment_status}}</td>
+        {% if i.status in 'Accepted' %}
+      <td><a href="{% url 'pay' i.id %}"><button type="button" class="btn btn-success">Pay Now</button> </a>  </td>
+         {% endif %}
+      <td><a href="{% url 'take_app_del'  i.id %}" onclick="return confirm('are u sure want to delete')">
+        <i class="fa fa-trash fs-4 text-primary"></i></a></td>
+
+    </tr>
+    
+    </tbody>
+    {%endfor%}
+  </table>
+</form>
+</div>
+
+</div>
+</div>
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+  <div class="row">
+    <p class="text-white"> <marquee width="60%" direction="left" height="50px">&copy copyright 2023 Birds Sanctuary </p>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADMIN|PANEL</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
+<style>
+  .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  </style>
+</head>
+<body>
+<div id="page">
+  <div id="header"> <a href="#" id="logo"><img src="{% static 'images/logo-page1.jpg'%}" alt=""/></a>
+    <ul>
+      <li class="first">
+        <h2><a href="{% url 'live'%}">Live</a></h2>
+        <span>Have fun in your visit</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Love</a></h2>
+        <span>Donate for the Birds</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Learn</a></h2>
+        <span>Get to know more about the Birds</span> </li>
+    </ul>
+    <a href="#">Buy tickets / Check Events</a>
+    <ul id="navigation">
+      <li id="link1" class="selected"><a href="{% url 'index'%}">Home</a></li>
+      <li id="link2"><a href="{% url 'birds_category'%}">Category</a></li>
+      <li id="link3"><a href="{% url 'add_birds'%} ">Birds</a></li>
+      <li id="link4"><a href="{% url 'take_app_view'%} ">Appointments</a></li>
+
+      <li id="link5" style="margin-left:70px;"><a href="{% url 'reg_view'%}">Users</a></li>
+      
+      
+      <li id="link7"><a href="{% url 'login' %}">Logout</a></li>
+    </ul>
+    <img src="{% static 'images/homebird.jpeg'%}" alt=""/>
+
+  </div>
+  <div id="content">
+    <div id="featured">
+      <marquee width="60%" direction="left" height="50px">
+      <h2>Let's know About Birds</h2>
+      </marquee>
+      <ul>
+        
+        <li class="first"> <a href="{% url 'gallery'%}"><img src="{% static 'images/parrot1.jpg'%}" alt=""/></a> <a href="#">Parrot</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/Toucan-bird.jpg'%}" alt=""/></a> <a href="#">Toucan</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/swift.jpg'%}" alt=""/></a> <a href="#">Swift</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/columbidae.jpeg'%}" alt=""/></a> <a href="#">Columbidae</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/hornbillae.jpeg'%}" alt=""/></a> <a href="#">Hornbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/spoonbill.jpeg'%}" alt=""/></a> <a href="#">Spoonbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/woodpecker.jpg'%}" alt=""/></a> <a href="#">woodpecker</a> </li>
+        <li class="last"> <a href="{% url 'gallery'%}"><img src="{% static 'images/bird-gallery.jpg'%}" alt=""/></a> <a href="gallery.html">Gallery</a> </li>
+        
+      </ul>
+    </div>
+    <div class="section1">
+      <h2>Time For Visit</h2>
+      <ul id="article">
+        <li class="first"> <a href="#"><span>Mansoon</span></a>
+          <p>In mansoon season we can see plenty of birds here.</p>
+        </li>
+        <li> <a href="#"><span> october</span></a>
+          <p> from mansoon to winter the Birds flock can be visible.</p>
+        </li>
+        <li> <a href="#"><span>December</span></a>
+          <p>we can visit the birdsanctuary within particular time of the season.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="section2">
+      <h2>Biodiversity Status</h2>
+      <p>India is home to vibrant animal and bird diversity,Birds have ecological value as important elements of natural systems.The zoo and bird sanctuary has initially been set up to entertain people.</p>
+      <a href="#"><img src="{% static 'images/Bird12.jpeg'%}" alt=""/></a>
+      <ul>
+        <li>
+          <p>More than 320 bird species recorded out of these 20 common resident water bird species.</p>
+        </li>
+        <li>
+          <p>44 common resident woodland species and 43 migratory water bird species.</p>
+        </li>
+        <li>
+          <p>About 10 species mammals includes nilgai,Indian mongoose,blacknaped hare,jackels.</p>
+        </li>
+        <li>
+          <p>one of the 466 iba(international bird area) sites in India.</p>.</p>
+        </li>
+
+      </ul>
+      <div id="section1">
+        <ul>
+          <li> <a href="#"><img src="{% static 'images/Bird13.jpeg'%}" alt=""/></a>
+
+            <p>Birds add life, sound and color to our lives.</p>
+          </li>
+
+        </ul>
+      </div>
+      <div id="section2">
+        <ul>
+          <li> <a href="#"><img src="{% static 'images/birds-2.jpg'%}" alt=""/></a>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section3">
+      <h2>Connect with youtube</h2>
+     <iframe width="150" height="250" src="https://www.youtube.com/embed/TCZDSAuWiNo" frameborder="0" allow="accelerometer ;autoplay
+     encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>
+      </div>
+  </div>
+  <div id="footer">
+    <div> <a href="#" class="logo"><img src="{% static 'images/bottom.jpg'%}" alt=""/></a>
+      <div>
+        <p>"Kalarava" its provides freedom to Birds </p>
+        <span>293 302 / 8867141568</span> <span>ekalravabird@gmail.com</span> </div>
+      <ul class="navigation">
+        <li><a href="{% static 'index.html'%}">Home</a></li>
+        <li><a href="{% static 'tickets.html'%}">Tickets</a></li>
+        <li><a href="{% static 'zoo.html'%}">About us</a></li>
+        <li><a href="{% static 'contact.html'%}">Contact Us</a></li>
+        <li><a href="{% static 'info.html'%}">Visitors Info</a></li>
+        <li><a href="{% static 'gallery.html'%}">Gallery</a></li>
+
+      </ul>
+      <ul>
+        <li><a href="{% static 'live.html'%}">Live : Have fun in your visit</a></li>
+        <li><a href="{% static 'live.html'%}">Love : Donate for the Birds</a></li>
+        <li><a href="{% static 'live.html'%}">Learn : Get to know More about the Birds</a></li>
+      </ul>
+      <marquee width="60%" direction="left" height="100px">
+      <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Created By <a target="_blank" href="http://www.freewebsitetemplates.com/">Kavya Hegde and Vinoda Patil</a></p>
+   </marquee> </div>
+  </div>
+</div>
+<script src="{% static 'js/script.js'%}" type="text/javascript"></script>
+</body>
+</html>

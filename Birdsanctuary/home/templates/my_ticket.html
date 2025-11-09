@@ -1,0 +1,58 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-2">
+
+      <h3 class="mt-3"> Menu Links </h3>
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+          {% include 'user_menu.html'%}
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-10">
+      <form name="form1" method="post" action="">
+        <h3 class="text-warning">My Ticket</h3>
+        <hr>
+        <form method="post">
+          {% csrf_token %}
+        <p> <input type="text" name="search" class="form-control  border-2 border border-success w-50" placeholder="Search">
+          <input type="submit" class="btn btn-outline-success mt-3 mb-3 w-50" value="Search"></p>
+          </form>
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+      <th>Ticket Id</th>
+      <th >appointment date</th>
+
+      <th >Action</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in userdict %}
+    <tr>
+      <td>{{i.id}}</td>
+      <td>{{i.appointment_date}}</td>
+      <td><a href="{% url 'view_ticket'  i.id %}"><button type="button" class="btn btn-info">View Ticket </button></a></td>
+
+    </tr>
+    
+    </tbody>
+    {%endfor%}
+  </table>
+</form>
+</div>
+
+</div>
+</div>
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+  <div class="row">
+    <p class="text-white"> <marquee width="60%" direction="left" height="50px">&copy copyright 2023 Birds Sanctuary </p>
+  </div>
+
+</div>
+</body>
+</html>

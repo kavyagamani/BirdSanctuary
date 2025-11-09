@@ -1,0 +1,100 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4">
+
+      <h3 class="mt-3"> Menu Links </h3>
+      {% include 'user_menu.html' %}
+    </div>
+    <div class="col-lg-8">
+
+<body>
+ 
+    <p style="color:red;text-align:center"> {{msg}} </p>
+    <script>
+        function a(x)
+        {
+           if(x=='Yes')
+           {
+               document.getElementById("demo").style.display="block";
+               document.getElementById("t9").value=1000;
+           }
+           else
+           {
+               document.getElementById("demo").style.display="none";
+           }
+        }
+    </script>
+<form  method="post">
+    {% csrf_token %}
+<table class="table" style="width:600px;">
+  <tr>
+    <td colspan="2" class="text-success fs-1 text-center mt-3">Take Appointment </td>
+    </tr>
+  
+ 
+  <tr>
+    <td height="71">Appointment date</td>
+    <td><input type="date" min="{{today}}"   name="t3" class="form-control border border-2 border-success"required title="fill out this field" ></td>
+  </tr>
+  
+  <tr>
+    <td>
+        <label for="Appointment_time"> Appointment time </label></td>
+              
+    <td><select name="Appointment_time" id="Appointment_time" name="t4" required class="form-select border border-2 border-success">
+     <option value="10:30am-1pm">10:30am-1pm</option>
+     <option value="3pm-6pm">3pm-6pm</option>
+
+    </select>
+    </td>
+  </tr>
+  <tr>
+    <td height="69">No of adult</td>
+    <td><input type="number" name="t5" class="form-control border border-2 border-success"required title="fill out this field"></td>
+  </tr>
+  <tr>
+    <td height="65">No of childrens</td>
+    <td><input type="number" name="t6"class="form-control border border-2 border-success"required title="fill out this field"></td>
+  </tr>
+  <tr>
+    <td>
+    <label for="shooting_cost"> Shooting cost option </label>
+              
+    <td><select name="shooting_cost" onchange="a(this.value)" id="shooting_cost" name="t7" required class="form-select border border-2 border-success">
+      <option> --select -- </option>
+      <option value="Yes">Yes</option>
+     <option value="No">No</option>
+
+    </select>
+    </td>
+  </tr>
+ 
+  <tr id="demo" style="display:none">
+    <td>shooting cost</td>
+    <td><input type="number" name="t9" id="t9" class="form-control border border-2 border-success" required readonly></td>
+  </tr>
+
+  <tr>
+      <td> </td>
+    <td>
+      <input type="submit" name="Submit" value="Submit" class="btn btn-primary">	
+      <input type="Reset" name="Reset" value="Reset" class="btn btn-success"></td>
+    </tr>
+</table>
+</form>
+</div>
+
+</div>
+</div>
+
+
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+<div class="row">
+  <p class="text-white"> &copy copyright 2023 Birds Sanctuary </p>
+</div>
+
+</div>
+</body>
+</html>

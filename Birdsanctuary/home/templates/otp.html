@@ -1,0 +1,49 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4">
+
+      
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+         
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-8">
+
+<body>
+<form name="form1" method="post">
+    {% csrf_token %}
+   <h1> ONE TIME PASSWORD</h1> 
+   <table class="table" style="width:600px;">
+   
+    <tr>
+      <td >OTP</td>
+      <td >
+      <input type="text" name="t1" placeholder="enter otp"  class="form-control border border-2 border-success"></td>
+    </tr>
+    
+    <tr>
+      <td colspan="2" align="center">
+	  <input type="submit" name="submit" value="Verify Otp"class="btn btn-primary" >
+      <input type="reset" name="reset" value="reset"class="btn btn-success"></td>
+    </tr>
+  </table>
+</form>
+</div>
+
+</div>
+</div>
+
+
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+<div class="row">
+  <p class="text-white"> &copy copyright 2023 Birds Sanctuary </p>
+</div>
+
+</div>
+</body>
+</html>

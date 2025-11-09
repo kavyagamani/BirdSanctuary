@@ -1,0 +1,376 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalarava Bird Sanctuary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+</head>
+<body>
+<div id="page">
+  <div id="header"> <a href="#" id="logo"><img src="{% static 'images/logo-page1.jpg'%}" alt=""/></a>
+    <ul id="links">
+      <li class="first">
+        <h2><a href="{% url 'live'%}">Live</a></h2>
+        <span>Have fun in your visit</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Love</a></h2>
+        <span>Donate for the Birds</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Learn</a></h2>
+        <span>Get to know more about the Birds</span> </li>
+    </ul>
+    <a href="{% url 'tickets' %}">Buy tickets / Check Events</a>
+    <ul id="navigation">
+      <li id="link1" ><a href="{% url 'index'%}">Home</a></li>
+      <li id="link2"><a href="{% url 'zoo'%}">About us</a></li>
+      <li id="link3"><a href="{% url 'info'%} ">Visitors Info</a></li>
+      <li id="link4"><a href="{% url 'tickets'%} ">Tickets</a></li>
+       <li id="link5"class="selected"><a href="{% url 'gallery'%}">Gallery</a></li> 
+      <li id="link6"><a href="{% url 'contact'%}">Contact Us</a></li>
+      <li id="link7"><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="gallery">
+      <h1>Let's know more about Birds</h1>
+      <ul>
+        <li>
+          <div> <a href="#"><img src="{% static 'images/parrot-gallery.jpg'%}" alt=""/></a></div>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal">
+  Parrot</a> </button></li>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Parrot</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>The scientific name of the parrot is Psittaciformes.
+            They belong to a family of Psittacopasserae.
+            These are mostly found in subtropical and tropical regions.
+            There are about 372 species in existence in 86 general.
+            Their size ranges from 3.5 to 40 inches and a mass of about 2.25 to 56 ounces.
+            These birds live in groups called flocks, and each congregation contains about 20 -30 birds.</p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <li>
+          <div><a href="#"><img src="{% static 'images/Toucan-bird-gallery.jpg'%}" alt=""/></a></div>
+           <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal1">
+           Toucan</a> </button>
+        </li>
+          <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Toucan</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>toucan is one of the beautiful beast bird which belongs to a family of Ramphastidae.
+         This family is closely related to American barbets. The name of this bird is from Portuguese.
+         Toucans mass ranges between 130 g -680 g, and its length lie in between 11.5 inches to 29 inches. Their bodies are short, and size is comparable to crow. Its tail is rounded and varies in length to the whole body. Its wings are small, and the neck is thick and short. These birds travel only short distances as they are forest-dwelling birds. Its tongue varies from 14-15 cm,
+         which is a narrow and grey color. It understands the taste and is sensitive to it.</p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <li>
+          <div><a href="#"><img src="{% static 'images/swift-gallery.jpg'%}" alt=""/></a></div>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal2">
+           Swift</a> </button>
+        </li>
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Swift</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>Swift belongs to a family of Apodidae of highly aerial birds.
+         Treeswifts are closely related to true swifts.
+         This family is derived from Greek, which means footless.
+         These are flying birds and are the fastest fliers and flies about 169 km/h.
+         Common swift can cover at least 200,000 km in a single year. Swift has large wingtip bones.</p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        <li>
+          <div><a href="#"><img src="{% static 'images/columbidae-gallery.jpeg'%}" alt=""/></a></div>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal3">
+           Columbidae</a> </button>
+        </li>
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Columbidae</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>Doves and pigeons are family members of Columbidae.
+         There are about 310 species of doves available.
+         These are considered as symbols of love.
+         They weigh about 900 g-2.1 kg. The length of their body ranges for adult male 55 cm,
+         70 cm for western crowned pigeon, and 13-15 cm for the dwarf.
+         The clutch size is about only 1. Its prey includes seed or fruit.
+         They live mostly in tropical nature and woodlands and are adjustable to any environment.
+         Both parents do incubation. Male birds make woo-hoo sounds to indicate they are single.
+
+</p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+        <li>
+          <div><a href="#"><img src="{% static 'images/hornbill-gallery.jpeg'%}" alt=""/></a></div>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal4">
+           Hornbill</a> </button>
+        </li>
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Hornbill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>It is a family member of Bucerotidae.
+         These are mostly found in subtropical Asia, Africa, and Melanesia.
+         Mass of hornbill is up to 6.2 kg, and the length of the body is between 1 ft- 3 ft 11 inches.
+         There are about 55 species. They are omnivores, eat fruits and insects.
+         This kind of bird has clutches that contain about six to eight white eggs.
+         During the whole period of nesting, the male brings 24000 fruits for females.
+         A specific feature of this bird is they have eyelashes.
+     </p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <li>
+          <div><a href="#"><img src="{% static 'images/spoonbill-gallery.jpeg'%}" alt=""/></a></div>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal5">
+           Spoonbill</a> </button>
+        </li>
+           <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Spoonbill</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>Spoonbill is a white bird and a family member of Thresiornithidae.
+         It is a long-legged wading bird. So far, six species are recognized.
+         Its scientific name is Plateinae. These build nest in trees and reed beds.
+         Its clutches have about three smooth white eggs and incubated by both parents.
+         They feed on fishes and insects which come between mandibles. They nest in colonies and flocks.
+     </p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <li>
+          <div><a href="#"><img src="{% static 'images/woodpecker-gallery.jpg'%}" alt=""/></a></div>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal6">
+           Woodpecker</a> </button>
+        </li>
+                     <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Woodpecker</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>The scientific name is Picidae and belongs to a family of Picidae.
+         They mostly live in New Zealand, Australia, Madagascar, New Guinea, and extreme Polar Regions.
+         There are about 200 species. Woodpeckers are usually black, red, yellow, and white.
+         They can peck 20 times per second. They feed on insects and dead trees.
+         The nest contains 2-5 eggs, and the incubation period is about 11-14 days.
+     </p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <li>
+          <div><a href="#"><img src="{% static 'images/swallows.jpg'%}" alt=""/></a></div>
+                    <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal7">
+           Swallows</a> </button>
+        </li>
+          <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">swallows</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>The scientific name of a swallow is Hirundinidae.
+         The species found in this family are 83. They breed across the world except in Antarctica.
+         They migrate to different places in the world. These are insectivorous.
+         Swallow speed is about 30-40 km/h. Mass of the body for an adult is about 10-60 g.
+         Its body length is 10-24 cm.
+         The clutch size is 4-5. The incubation period is shared between species.
+     </p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+        <li>
+          <div><a href="#"><img src="{% static 'images/Peafowl.jpg'%}" alt=""/></a></div>
+          <a href="#"><button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                              data-bs-target="#exampleModal8">
+           Peafowl</a> </button>
+        </li>
+          <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog"style="max-width: 80%" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Peafowl</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+     <p>Peafowl is otherwise known as the peacock, which is treated as a pet and wild bird.
+         There are two Asiatic species blue for Indian peafowl originally from Indian
+         and Sri Lanka, other from Burma, which is green in color.
+         The specific feature of their feather is that it is marked with eyespots.
+         Peacocks are undoubtedly beautiful birds that amaze us.
+         The crest is seen atop the head of both sexes.
+         The plumage of peafowl is a mixture of brown, green, and dull grey.
+         Through vocalization, it attracts peahens. Peafowl is omnivores.
+         They eat flower petals, parts of plants, seed heads, and insects.
+
+
+     </p>
+</div>
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <li>
+          <div><a href="#"><img src="images/coucal.jpg" alt=""/></a></div>
+          <a href="#">Greatest Coucal</a> </li>
+       <li>
+          <div><a href="#"><img src="images/Bea-eater.jpg" alt=""/></a></div>
+          <a href="#">Bea eater</a> </li>
+       <li>
+          <div><a href="#"><img src="images/Rainbow-loriket.jpg" alt=""/></a></div>
+          <a href="#">Rain-bow Loriket</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="footer">
+    <div> <a href="#" class="logo"><img src="{% static 'images/bottom.jpg'%}" alt=""/></a>
+      <div>
+        <p>"Kalarava" its provides freedom to Birds </p>
+        <span>293 302 / 8867141568</span> <span>email@kalravabird.com</span> </div>
+      <ul class="navigation">
+         <li><a href="{% static 'index.html'%}">Home</a></li>
+        <li><a href="{% static 'tickets.html'%}">Tickets</a></li>
+        <li><a href="{% static 'zoo.html'%}">About us</a></li>
+        <li><a href="{% static 'contact.html'%}">Contact Us</a></li>
+        <li><a href="{% static 'info.html'%}">Visitors Info</a></li>
+        <li><a href="{% static 'gallery.html'%}">Gallery</a></li>
+
+      </ul>
+      <ul>
+        <li><a href="#">Live : Have fun in your visit</a></li>
+        <li><a href="#">Love : Donate for the Birds</a></li>
+        <li><a href="#">Learn : Get to know More about the Birds</a></li>
+      </ul>
+      <marquee width="60%" direction="left" height="100px">
+      <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Created By <a target="_blank" href="http://www.freewebsitetemplates.com/">Kavya Hegde and Vinoda Patil</a></p>
+      </marquee>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>

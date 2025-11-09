@@ -1,0 +1,84 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4">
+
+      <h3 class="mt-3"> Menu Links </h3>
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-primary" href="#"><i class="fa fa-home"></i>HOME</a>
+
+            </li>
+           <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'add_birds' %}"><i class="fa fa-plus-square-o"></i>AddBirds</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'take_app' %}"><i class="fa fa-pencil-square-o"></i>Takeappointment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'generate_tic' %}"><i class="fa fa-object-group"></i>Generate Ticket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'birds_category' %}"><i class="fa fa-twitter"></i>Birds Category</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-8">
+
+<body>
+    <p style="color:red;text-align:center"> {{msg}} </p>
+<form name="form1" method="post" action="" >
+    {% csrf_token %}
+    {% for i in userdict %}
+<table class="table" style="width:600px;">
+  <tr>
+    <td colspan="2" class="text-success fs-1 text-center mt-3">Add Birds   </td>
+    </tr>
+  <tr>
+    <td height="71"> category_name</td>
+    <td><input type="text" name="t1"  value="{{i.category_name}}" class="form-control border border-2 border-success"required pattern="[A-Za-z\s]+" title="Enter characters only"title="fill out this field"></td>
+  </tr>
+  <tr>
+    <td width="261" height="61">Bird_name</td>
+    <td width="304"><input type="text" name="t2" value="{{i.bird_name}}" class="form-control border border-2 border-success"required pattern="[A-Za-z\s]+" title="Enter characters only" pattern="[A-Za-z\s]+" title="Enter characters only"title="fill out this field"></td>
+  </tr>
+  <tr>
+    <td height="71">country</td>
+    <td>
+      <input type="text" name="t3"  value="{{i.country}}" class="form-control border border-2 border-success" title="Enter characters only"title="fill out this field">
+    </select></td>
+  </tr>
+  <tr>
+    <td height="69">Image</td>
+    <td><input type="image" border="0" value="{{i.image}}" name="t4" src="file:///C|/Users/hp/AppData/Roaming/Macromedia/Dreamweaver%20MX%202004/Configuration/Temp/FlashElements/ImageViewer/image"></td>
+  </tr>
+  <tr>
+    <td height="65">Description</td>
+    <td><textarea name="t5"   class="form-control border border-2 border-success" required pattern="[A-Za-z\s]+"
+         title="fill out this field">{{i.description}}</textarea></td>
+  </tr>
+  <tr>
+    <td height="100" colspan="4" align="center">
+      <input type="submit" name="Submit" value="Submit" class='btn btn-primary'>	
+      <input type="Reset" name="Reset" value="Reset" class='btn btn-success'></td>
+    </tr>
+    {%  endfor %}
+</table>
+</form>
+</div>
+</div>
+</div>
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+<div class="row">
+<p class="text-white"> &copy copyright 2023 Birds Sanctuary </p>
+</div>
+</div>
+</body>
+</html>

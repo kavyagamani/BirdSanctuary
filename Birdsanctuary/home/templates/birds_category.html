@@ -1,0 +1,52 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4">
+
+      <h3 class="mt-3"> Menu Links </h3>
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+          {% include 'side_menu.html' %}
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-8">
+
+    <p style="color:red;text-align:center"> {{msg}} </p>
+<form name="form1" method="post" action="" >
+    {% csrf_token %}
+<table class="table" style="width:600px;">
+  <tr>
+    <td height="83" colspan="2" class="text-success fs-1 text-center mt-3">Birds category </td>
+    </tr>
+  <tr>
+    <td width="261" height="71">category_name</td>
+    <td width="304"><input type="text" name="t1" class="form-control border border-2 border-success"required pattern="[A-Za-z\s]+" title="Enter characters only" title="fill out this field"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <input type="submit" name="Submit" value="Submit" class="btn btn-primary">	
+      <input type="Reset" name="Reset" value="Reset" class="btn btn-success"></td>
+    </tr>
+</table>
+</form>
+
+</div>
+
+  </div>
+</div>
+
+
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+  <div class="row">
+    <p class="text-white"> <marquee width="60%" direction="left" height="50px">&copy copyright 2023 Birds Sanctuary </p>
+    </marquee></div>
+
+</div>
+
+    
+</body>
+</html>

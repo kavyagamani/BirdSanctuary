@@ -1,0 +1,114 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalarava Bird sanctuary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
+</head>
+<body>
+<div id="page">
+  <div id="header"> <a href="#" id="logo"><img src="{% static 'images/logo-page1.jpg'%}" alt=""/></a>
+    <ul id="links">
+      <li class="first">
+        <h2><a href="{% url 'live'%}">Live</a></h2>
+        <span>Have fun in your visit</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Love</a></h2>
+        <span>Donate for the Birds</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Learn</a></h2>
+        <span>Get to know more about the Birds</span> </li>
+    </ul>
+    <a href="{% url 'tickets' %}">Buy tickets / Check Events</a>
+    <ul id="navigation">
+      <li id="link1" ><a href="{% url 'index'%}">Home</a></li>
+      <li id="link2"><a href="{% url 'zoo'%}">About us</a></li>
+      <li id="link3"class="selected"><a href="{% url 'info'%} ">Visitors Info</a></li>
+      <li id="link4"><a href="{% url 'tickets'%} ">Tickets</a></li>
+       <li id="link5"><a href="{% url 'gallery'%}">Gallery</a></li> 
+      <li id="link6"><a href="{% url 'contact'%}">Contact Us</a></li>
+      <li id="link7"><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="info">
+      <h1>Visitors Tips</h1>
+      <h2>Best Time to Visit:</h2><span<p>June to December.from morning 10-30am:1pm,4pm-7:30pm</p>
+<h3>Tips for a “Pleasant Trip”:</h3>
+      <ul>
+        <li>
+          <h2><a href="#">Silence is the golden rule .</a></h2>
+          <p>Maintanance of silence is mandatory in birdsanctuary around places.
+            Blowing of horns, playing loud music are prohibited in the birdsanctuary because it may harm the birds.</p>
+        </li>
+         <li>
+          <h2><a href="#">Do not carry firearms.</a></h2>
+          <p>They may be confiscate.they may affect the birds.firearms are completly prohibited around the area.</p>
+        </li>
+
+        <li>
+          <h2><a href="#">Don’t litter the sanctuary.</a></h2>
+          <p>Use dustbins and always carry your leftovers back.
+            cleanness and maintanance of the birdsanctuary is important so please co-operate to wellness of the sanctuary</p>
+        </li>
+        <li>
+          <h2><a href="#"> Do not disturb birds.</a></h2>
+          <p>Be inquisitive and develop an eye for birds.
+          the birds are very senstive around the nature.the sanctuary provide freedom for the birds so dont harm the birds.</p>
+
+        </li>
+        <li>
+          <h2><a href="#">Be sensitive to the needs of other visitors.</a></h2>
+          <p>you may have to treat other visitors to good dont make noise with other visitors treat them as your friend.</p>
+        </li>
+        <li>
+          <h2><a href="#">Visit within the specified timings. </a></h2>
+          <p>Entry beyond these timings is treated as trespass and may invite legal action..</p>
+        </li>
+      </ul>
+    </div>
+    <div id="featured">
+      <marquee width="60%" direction="left" height="50px">
+      <h2>Let's know About Birds</h2>
+      </marquee>
+      <ul>
+        <li class="first"> <a href="{% url 'gallery'%}"><img src="{% static 'images/parrot1.jpg'%}" alt=""/></a> <a href="#">Parrot</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/Toucan-bird.jpg'%}" alt=""/></a> <a href="#">Toucan</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/swift.jpg'%}" alt=""/></a> <a href="#">Swift</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/columbidae.jpeg'%}" alt=""/></a> <a href="#">Columbidae</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/hornbillae.jpeg'%}" alt=""/></a> <a href="#">Hornbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/spoonbill.jpeg'%}" alt=""/></a> <a href="#">Spoonbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/woodpecker.jpg'%}" alt=""/></a> <a href="#">woodpecker</a> </li>
+        <li class="last"> <a href="{% url 'gallery'%}"><img src="{% static 'images/bird-gallery.jpg'%}" alt=""/></a> <a href="gallery.html">Gallery</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="footer">
+    <div> <a href="#" class="logo"><img src="{% static 'images/bottom.jpg'%}" alt=""/></a>
+      <div>
+        <p>"Kalarava" its provides freedom to Birds </p>
+        <span>293 302 / 8867141568</span> <span>email@kalravabird.com</span> </div>
+      <ul class="navigation">
+       <li><a href="{% static 'index.html'%}">Home</a></li>
+        <li><a href="{% static 'tickets.html'%}">Tickets</a></li>
+        <li><a href="{% static 'zoo.html'%}">About us</a></li>
+        <li><a href="{% static 'contact.html'%}">Contact Us</a></li>
+        <li><a href="{% static 'info.html'%}">Visitors Info</a></li>
+        <li><a href="{% static 'gallery.html'%}">Gallery</a></li>
+
+      </ul>
+      <ul>
+        <li><a href="{% static 'live.html'%}">Live : Have fun in your visit</a></li>
+        <li><a href="{% static 'live.html'%}">Love : Donate for the Birds</a></li>
+        <li><a href="{% static 'live.html'%}">Learn : Get to know More about the Birds</a></li>
+      </ul>
+      <marquee width="60%" direction="left" height="100px">
+      <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Created By <a target="_blank" href="http://www.freewebsitetemplates.com/">Kavya Hegde and Vinoda Patil</a></p>
+    </marquee>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

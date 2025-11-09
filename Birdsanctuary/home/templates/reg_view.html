@@ -1,0 +1,89 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4">
+
+      <h3 class="mt-3"> Menu Links </h3>
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-primary" href="#"><i class="fa fa-home"></i>HOME</a>
+
+            </li>
+           <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'add_birds' %}"><i class="fa fa-plus-square-o"></i>AddBirds</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'take_app' %}"><i class="fa fa-pencil-square-o"></i>Takeappointment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'generate_tic' %}"><i class="fa fa-object-group"></i>Generate Ticket</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-primary" href="{% url 'birds_category' %}"><i class="fa fa-twitter"></i>Birds Category</a>
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-8">
+<form name="form1" method="post" action="">
+  <h3 class="text-warning">Register view</h3>
+  <hr>
+  <form method="post">
+    {% csrf_token %}
+  <p> <input type="text" name="search" class="form-control  border-2 border border-success w-50" placeholder="Search">
+    <input type="submit" class="btn btn-outline-success mt-3 mb-3 w-50" value="Search"></p>
+    </form>
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+      
+      <td >Name</td>
+      <td>Gender</td>
+      <td >City</td>
+      <td >Address</td>
+      <td >Email</td>
+      <td >Mobileno</td>
+      <td >visitor Type </td>
+      <td >action</td>
+      <td>Edit</td>
+    </tr>
+    </thead>
+    <tbody>
+    {% for i in userdict %}
+    <tr>
+      <td>{{i.name}}</td>
+      <td>{{i.gender}}</td>
+      <td>{{i.city}}</td>
+      <td>{{i.address}}</td>
+      
+      <td>{{i.email}}</td>
+      <td>{{i.mobile_no}}</td>
+      <td>{{i.visitor_type}}</td>
+      <td><a href=" {% url 'register_del' i.id %}" onclick="return confirm('are u sure want to delete')">
+        <i class="fa fa-trash fs-4 text-primary"></i></a></td>
+      <td><a href="{%  url 'register_edit'  i.id %}"><i class="fa fa-pencil-square" style="font-size:24px"></i></a></td>
+      
+    </tr>
+    
+  </tbody>
+  {% endfor %}
+  </table>
+</form>
+</div>
+
+</div>
+</div>
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+  <div class="row">
+    <p class="text-white"> <marquee width="60%" direction="left" height="50px">&copy copyright 2023 Birds Sanctuary </p>
+  </div>
+
+</div>
+</body>
+</html>

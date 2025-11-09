@@ -1,0 +1,78 @@
+{% include 'admin_menu.html' %}
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-lg-4">
+
+      
+      <nav class="navbar navbar-expand-*">
+        <div class="container-fluid">
+         
+         
+        </div>
+      </nav>
+    </div>
+    <div class="col-lg-8">
+
+<body>
+<form name="form1" method="post">
+  <h1> Reset My Password</h1>
+  {% csrf_token %}
+  <table class="table" style="width:600px;">
+    
+    <tr>
+      <td>new password</td>
+      <td >
+      <input type="password" name="t1" placeholder="enter password" id="myInput1"  class="form-control border border-2 border-success" ></td>
+    </tr>
+
+    <tr>
+      <td>confirm password</td>
+      <td><input type="password" name="t2"  class="form-control border border-2 border-success"></td>
+    </tr>
+  
+    <tr>
+      <td>   <input type="checkbox" onclick="myFunction()"/>show password</td>
+	  <td><input type="submit" name="submit" value="ResetPassword"class="btn btn-primary"></td>
+      
+    </tr>
+   
+  </table>
+</form>
+</div>
+
+</div>
+</div>
+
+
+<div class="container-fluid bg-dark p-3 " style="margin-top:150px;">
+<div class="row">
+  <p class="text-white"> &copy copyright 2023 Birds Sanctuary </p>
+</div>
+
+</div>
+<script>
+    function myFunction() 
+{
+  var x = document.getElementById("myInput1");
+  var y = document.getElementById("myInput2");
+  var z = document.getElementById("myInput3");
+  var n = document.getElementById("myInput4");
+
+  if(x.type==="password") 
+  {
+    x.type="text";
+  } 
+  else
+   {
+    x.type = "password";
+  }
+}
+    $(document).ready(function(){
+        $('#birth-date').mask('00/00/0000');
+        $('#phone-number').mask('0000000000');
+       })
+
+</script>
+</body>
+</html>

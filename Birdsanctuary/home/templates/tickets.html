@@ -1,0 +1,102 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalarava Bird sanctuary </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
+</head>
+<body>
+<div id="page">
+  <div id="header"> <a href="#" id="logo"><img src="{% static 'images/logo-page1.jpg'%}" alt=""/></a>
+    <ul id="links">
+      <li class="first">
+        <h2><a href="{% url 'live'%}">Live</a></h2>
+        <span>Have fun in your visit</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Love</a></h2>
+        <span>Donate for the Birds</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Learn</a></h2>
+        <span>Get to know more about the Birds</span> </li>
+    </ul>
+    <a href="{% url 'tickets' %}">Buy tickets / Check Events</a>
+    <ul id="navigation">
+      <li id="link1" ><a href="{% url 'index'%}">Home</a></li>
+      <li id="link2"><a href="{% url 'zoo'%}">About us</a></li>
+      <li id="link3"><a href="{% url 'info'%} ">Visitors Info</a></li>
+      <li id="link4"class="selected"><a href="{% url 'tickets'%} ">Tickets</a></li>
+       <li id="link5"><a href="{% url 'gallery'%}">Gallery</a></li> 
+      <li id="link6"><a href="{% url 'contact'%}">Contact Us</a></li>
+      <li id="link7"><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="tickets">
+      <h1>Tickets</h1>
+      <p>Based on the Government act we are providing tickets for the birdsanctuary visitors.
+        it is mandatory to take the ticket to visit our Bird sanctuary.</p>
+      <ul>
+        <li class="first">
+          <div><a href="#"><img src="{% static 'images/ticket-indian.jpg'%}" alt=""/></a></div>
+          <h2><a href="#">Indians</a></h2>
+          <p>For Indians the cost is less as compare to foreign visitors .</p>
+          <span>Adult - $50.00</span> <span>Kids - $30.00</span> </li>
+        <li>
+          <div><a href="#"><img src="{% static 'images/tiket.jpg'%}" alt=""/></a></div>
+          <h2><a href="#">Foreigners</a></h2>
+          <p>For special treatements are providing to foreigners including guide allotment also.</p>
+          <span>Adult - $300.00</span> <span>Kids - $150.00</span> </li>
+        <li>
+          <div><a href="#"><img src="{% static 'images/camera-bird.jpg'%}" alt=""/></a></div>
+          <h2><a href="#">For shooting cameras</a></h2>
+          <p>For shooting cameras the cost is high as compared to normal visitors.
+            certain precautions are taken while shooting cameras the birds are not get affected during shooting.</p>
+          <span>still camera (per visit) - $ 1,000.00</span> 
+      </ul>
+    </div>
+    <div id="featured">
+      <marquee width="60%" direction="left" height="50px">
+      <h2>Let's know About Birds</h2>
+      </marquee>
+      
+      <ul>
+        <li class="first"> <a href="{% url 'gallery'%}"><img src="{% static 'images/parrot1.jpg'%}" alt=""/></a> <a href="#">Parrot</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/Toucan-bird.jpg'%}" alt=""/></a> <a href="#">Toucan</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/swift.jpg'%}" alt=""/></a> <a href="#">Swift</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/columbidae.jpeg'%}" alt=""/></a> <a href="#">Columbidae</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/hornbillae.jpeg'%}" alt=""/></a> <a href="#">Hornbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/spoonbill.jpeg'%}" alt=""/></a> <a href="#">Spoonbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/woodpecker.jpg'%}" alt=""/></a> <a href="#">woodpecker</a> </li>
+        <li class="last"> <a href="{% url 'gallery'%}"><img src="{% static 'images/bird-gallery.jpg'%}" alt=""/></a> <a href="gallery.html">Gallery</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="footer">
+    <div> <a href="#" class="logo"><img src="{% static 'images/bottom.jpg'%}" alt=""/></a>
+      <div>
+        <p>"Kalarava" its provides freedom to Birds </p>
+        <span>293 302 / 8867141568</span> <span>email@kalravabird.com</span> </div>
+      <ul class="navigation">
+       <li><a href="{% url 'index'%}">Home</a></li>
+        <li><a href="{% url 'tickets'%}">Tickets</a></li>
+        <li><a href="{% url 'zoo'%}">About us</a></li>
+        <li><a href="{% url 'contact'%}">Contact Us</a></li>
+        <li><a href="{% url 'info'%}">Visitors Info</a></li>
+        <li><a href="{% url 'gallery'%}">Gallery</a></li>
+
+      </ul>
+      <ul>
+        <li><a href="{% url 'live'%}">Live : Have fun in your visit</a></li>
+        <li><a href="{% url 'live'%}">Love : Donate for the Birds</a></li>
+        <li><a href="{% url 'live'%}">Learn : Get to know More about the Birds</a></li>
+      </ul>
+      <marquee width="60%" direction="left" height="100px">
+      <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Created By <a target="_blank" href="http://www.freewebsitetemplates.com/">Kavya Hegde and Vinoda Patil</a></p>
+    </marquee>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

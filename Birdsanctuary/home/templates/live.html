@@ -1,0 +1,81 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalarava Bird sanctuary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
+</head>
+<body>
+<div id="page">
+  <div id="header"> <a href="#" id="logo"><img src="{% static 'images/logo-page1.jpg'%}" alt=""/></a>
+    <ul id="links">
+      <li class="first">
+        <h2><a href="{% url 'live'%}">Live</a></h2>
+        <span>Have fun in your visit</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Love</a></h2>
+        <span>Donate for the Birds</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Learn</a></h2>
+        <span>Get to know more about the Birds</span> </li>
+    </ul>
+    <a href="{% url 'tickets' %}">Buy tickets / Check Events</a>
+    <ul id="navigation">
+      <li id="link1" class="selected"><a href="{% url 'index'%}">Home</a></li>
+      <li id="link2"><a href="{% url 'zoo'%}">About us</a></li>
+      <li id="link3"><a href="{% url 'info'%} ">Visitors Info</a></li>
+      <li id="link4"><a href="{% url 'tickets'%} ">Tickets</a></li>
+       <li id="link5"><a href="{% url 'gallery'%}">Gallery</a></li> 
+      <li id="link6"><a href="{% url 'contact'%}">Contact Us</a></li>
+      <li id="link7"><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="live">
+      <h1>Live</h1>
+      <p>Bird sanctuaries are built to protect the birds.
+        its gives you more relaxation in  your vacation free time.
+        Each and every bird has a different natural habitat. Thus, you won’t find a similar bird everywhere.
+        come and visit with the family you will get entertainment and full relaxation in our bird sanctuary.
+      </p>
+      <h1>Love</h1>
+      <p>Love towards birds.Birds add life, sound and color to our lives.
+        Watching wild birds is often a diversion from the pressures of our daily lives.
+      conservation of birds are important in the ecosystem.Donate for the Birds .</p>
+      <h1>Learn</h1>
+      <p>Birds are important members of many ecosystems.
+        birds are important to humans in many ways,
+        such as serving as a source of food and providing fertilizer in agricultural settings.
+         come and Learn to explore about the Birds.   </p>
+    </div>
+  </div>
+<div id="footer">
+    <div> <a href="#" class="logo"><img src="{% static 'images/bottom.jpg'%}" alt=""/></a>
+      <div>
+        <p>"Kalarava" its provides freedom to Birds </p>
+        <span>293 302 / 8867141568</span> <span>email@kalravabird.com</span> </div>
+     <ul class="navigation">
+       <li><a href="{% url 'index'%}">Home</a></li>
+        <li><a href="{% url 'tickets'%}">Tickets</a></li>
+        <li><a href="{% url 'zoo'%}">About us</a></li>
+        <li><a href="{% url 'contact'%}">Contact Us</a></li>
+        <li><a href="{% url 'info'%}">Visitors Info</a></li>
+        <li><a href="{% url 'gallery'%}">Gallery</a></li>
+
+      </ul>
+      <ul>
+        <li><a href="{% static 'live.html'%}">Live : Have fun in your visit</a></li>
+        <li><a href="{% static 'live.html'%}">Love : Donate for the Birds</a></li>
+        <li><a href="{% static 'live.html'%}">Learn : Get to know More about the Birds</a></li>
+      </ul>
+      <marquee width="60%" direction="left" height="100px">
+      <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Created By <a target="_blank" href="http://www.freewebsitetemplates.com/">Kavya Hegde and Vinoda Patil</a></p>
+    </marquee>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script src= 'https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>

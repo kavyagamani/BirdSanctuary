@@ -1,0 +1,109 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalarava Bird sanctuary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
+</head>
+<body>
+<div id="page">
+  <div id="header"> <a href="#" id="logo"><img src="{% static 'images/logo-page1.jpg'%}" alt=""/></a>
+    <ul id="links">
+      <li class="first">
+        <h2><a href="{% url 'live'%}">Live</a></h2>
+        <span>Have fun in your visit</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Love</a></h2>
+        <span>Donate for the Birds</span> </li>
+      <li>
+        <h2><a href="{% url 'live'%}">Learn</a></h2>
+        <span>Get to know more about the Birds</span> </li>
+    </ul>
+    <a href="{% url 'tickets' %}">Buy tickets / Check Events</a>
+    <ul id="navigation">
+      <li id="link1" ><a href="{% url 'index'%}">Home</a></li>
+      <li id="link2"class="selected"><a href="{% url 'zoo'%}">About us</a></li>
+      <li id="link3"><a href="{% url 'info'%} ">Visitors Info</a></li>
+      <li id="link4"><a href="{% url 'tickets'%} ">Tickets</a></li>
+       <li id="link5"><a href="{% url 'gallery'%}">Gallery</a></li> 
+      <li id="link6"><a href="{% url 'contact'%}">Contact Us</a></li>
+      <li id="link7"><a href="{% url 'login' %}">Login</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <div id="zoo">
+      <h1>About Us</h1>
+      <h3>It is heaven for the Birds.</h3>
+      <p>India is home to vibrant animal and bird diversity,Birds have ecological value as important elements of natural systems.The zoo and bird sanctuary has initially been set up to entertain people.gradually,they have played an essential role in nature maintenance. The goal of the Zoo and Bird sanctuary is conservation. It was easy because of the research done to computerize the management, maintenance and ticketing of the wildlife..</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Birds add life, sound and color to our lives. Watching wild birds is often a diversion from the pressures of our daily lives. We even value birds that we personally will never see; it is comforting and uplifting just knowing that our world includes birds that can offer joy in our lives..Birds are recognized as one of the most important indicators of the state of the environment. Because they are sensitive to habitat change and because they are easy to census, birds are the ecologist's favorite tool.</p>
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The conditions of clean air, food, healthy plants and safe places to raise young that make good homes for birds and other wildlife, also make good homes for people; a habitat good for birds is a good environment for people..In addition to the joys they bring to people's lives, birds are also valuable for economic reasons. Birds have ecological value as important elements of natural systems.
+
+           Birds provide insect and rodent control, plant pollination, and seed dispersal which result in tangible benefits to people.
+
+             Insect outbreaks can annually destroy hundreds of millions of dollars of agricultural and forest products. </p>
+      <h4>This  System adequately manages and processes all the works of the Bird sanctuary.
+        The software system can store bird sanctuary visitor ticket data,
+        reducing response time to queries from different users. .</h4>
+      <h3>Timinigs to visit:</h3>
+      <ul><li>
+        Monday:10:30am–1pm 4–7:30pm
+      </li>
+      <li>
+        Tuesday:10:30am–1pm,4–7:30pm
+        </li>
+      <li>
+        Wednesday:10:30am–1pm,4–7:30pm</li>
+       <li> Thursday:10:30am–1pm,4–7:30pm</li>
+        <li>Friday:10:30am–1pm,4–7:30pm</li>
+       <li> Saturday:10:30am–1pm,4–7:30pm</li>
+        <li>Sunday:10:30am–1pm,4–7:30pm</li>
+    </ul>
+
+    </div>
+
+    <div id="featured">
+      <marquee width="60%" direction="left" height="50px">
+      <h2>Let's know About Birds</h2>
+      </marquee>
+      <ul>
+        <li class="first"> <a href="{% url 'gallery'%}"><img src="{% static 'images/parrot1.jpg'%}" alt=""/></a> <a href="#">Parrot</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/Toucan-bird.jpg'%}" alt=""/></a> <a href="#">Toucan</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/swift.jpg'%}" alt=""/></a> <a href="#">Swift</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/columbidae.jpeg'%}" alt=""/></a> <a href="#">Columbidae</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/hornbillae.jpeg'%}" alt=""/></a> <a href="#">Hornbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/spoonbill.jpeg'%}" alt=""/></a> <a href="#">Spoonbill</a> </li>
+        <li> <a href="{% url 'gallery'%}"><img src="{% static 'images/woodpecker.jpg'%}" alt=""/></a> <a href="#">woodpecker</a> </li>
+        <li class="last"> <a href="{% url 'gallery'%}"><img src="{% static 'images/bird-gallery.jpg'%}" alt=""/></a> <a href="gallery.html">Gallery</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="footer">
+    <div> <a href="#" class="logo"><img src="{% static 'images/bottom.jpg'%}" alt=""/></a>
+      <div>
+        <p>"Kalarava" its provides freedom to Birds </p>
+        <span>293 302 / 8867141568</span> <span>email@kalravabird.com</span> </div>
+      <ul class="navigation">
+        <li><a href="{% url 'index'%}">Home</a></li>
+        <li><a href="{% url 'tickets'%}">Tickets</a></li>
+        <li><a href="{% url 'zoo'%}">About us</a></li>
+        <li><a href="{% url 'contact'%}">Contact Us</a></li>
+        <li><a href="{% url 'info'%}">Visitors Info</a></li>
+        <li><a href="{% url 'gallery'%}">Gallery</a></li>
+
+      </ul>
+      <ul>
+        <li><a href="{% url 'live'%}">Live : Have fun in your visit</a></li>
+        <li><a href="{% url 'live'%}">Love : Donate for the Birds</a></li>
+        <li><a href="{% url 'live'%}">Learn : Get to know More about the Birds</a></li>
+      </ul>
+      <marquee width="60%" direction="left" height="100px">
+      <p>Copyright &copy; <a href="#">Domain Name</a> - All Rights Reserved | Created By <a target="_blank" href="http://www.freewebsitetemplates.com/">Kavya Hegde and Vinoda Patil</a></p>
+    </marquee>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
